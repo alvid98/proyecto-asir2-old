@@ -79,15 +79,39 @@ case $opcion in
           read -p "Presiona ENTER para continuar..."
          ;;
 	 4)
-	  echo hola
+	  echo "atrás"
+	  opcion=1
+	 ;;
+        esac
+      ;;
+      2)
+	echo "1- Crear grupo."
+	echo "2- Editar grupo."
+	echo "3- Eliminar grupo."
+	echo "4- Atrás"
+        read -p "Opción: " grupo
+        case $grupo in
+         1)
+	  echo "crear grupo"
+	  read -p "Presiona ENTER para continuar..."
+         ;;
+         2)
+	  echo "editar grupo"
+	  read -p "Presiona ENTER para continuar..."
+         ;;
+         3)
+	  echo "eliminar grupo"
+          read -p "Presiona ENTER para continuar..."
+         ;;
+	 4)
+	  echo "atrás"
+	  opcion=1
 	 ;;
         esac
 
       ;;
-      2)
-	echo "2"
-      ;;
       3)
+	echo "atrás"
 	opcion=0
       ;;
     esac
@@ -101,11 +125,14 @@ case $opcion in
     case $apache in
       1)
 	echo "1"
+        read -p "Presiona ENTER para continuar..."
       ;;
       2)
 	echo "2"
+        read -p "Presiona ENTER para continuar..."
       ;;
       3)
+	echo "atrás"
 	opcion=0
       ;;
     esac
@@ -120,14 +147,18 @@ case $opcion in
     case $bbdd in
       1)
 	mysql -u root
+        read -p "Presiona ENTER para continuar..."
       ;;
       2)
-	echo "2"
+	echo "Exportar bases de datos"
+        read -p "Presiona ENTER para continuar..."
       ;;
       3)
-	echo "3"
+	echo "Importar bases de datos"
+        read -p "Presiona ENTER para continuar..."
       ;;
       4)
+	echo "atrás"
 	opcion=0
       ;;
     esac
@@ -141,15 +172,19 @@ case $opcion in
     read -p "Opción: " servicios
     case $servicios in
       1)
-	echo "1"
+	echo "FTP"
+        read -p "Presiona ENTER para continuar..."
       ;;
       2)
-	echo "2"
+	echo "Configuración SSH"
+        read -p "Presiona ENTER para continuar..."
       ;;
       3)
-	echo "3"
+	echo "Configuracion Mail"
+        read -p "Presiona ENTER para continuar..."
       ;;
       4)
+	echo "atrás"
 	opcion=0
       ;;
     esac
@@ -199,18 +234,22 @@ case $opcion in
   ;;
   7)
     clear
-    echo "Configuración de Virtualhosts."
-    echo "Instalación de certificados."
+    echo "1- Mostrar procesos activos."
+    echo "2- Paquetes actualizables."
     echo "3- Atrás."
     read -p "Opción: " usuario
     case $usuario in
       1)
-	echo "1"
+	echo "Mostrar procesos activos."
+        read -p "Presiona ENTER para continuar..."
       ;;
       2)
-	echo "2"
+	echo "Paquetes actualizables."
+	./scripts/pact.sh
+        read -p "Presiona ENTER para continuar..."
       ;;
       3)
+	echo "atrás"
 	opcion=0
       ;;
     esac
@@ -220,5 +259,4 @@ case $opcion in
     salir=1
   ;;
 esac
-
 done
