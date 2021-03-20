@@ -1,5 +1,6 @@
-# proyecto-asir2
-Trabajo de fin de grado asir2
+# proyecto-asir2-old
+Trabajo de fin de grado asir2.
+Este trabajo está desactualizado, se mantiene en github por los scripts.
 
 # Descripción
 
